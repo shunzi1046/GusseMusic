@@ -7,11 +7,11 @@ import android.widget.Button;
 * @author Zhang Qi
 * */
 public class WordButton {
-    private int mIndex;
-    private boolean mIsVisiable;
-    private String mWordString;
+    public int mIndex;
+    public boolean mIsVisiable;
+    public String mWordString;
 
-    private Button mViewButton;
+    public Button mViewButton;
 
     public WordButton(){
         mIsVisiable = true;
