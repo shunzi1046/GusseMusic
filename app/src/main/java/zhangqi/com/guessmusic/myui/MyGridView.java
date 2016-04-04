@@ -5,6 +5,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.GridView;
 
 import java.util.ArrayList;
@@ -48,12 +49,14 @@ public class MyGridView extends GridView {
         }
 
         @Override
-        public View getView(int position, View v, ViewGroup p) {
+        public View getView(int pos, View v, ViewGroup p) {
             WordButton holder;
             if(v==null){
                 v= Util.getView(mContext, R.layout.self_ui_gridview_item);
 
-                holder = mArrayList.get(position);
+                holder = mArrayList.get(pos);
+                holder.mIndex = pos;
+                holder.mViewButton = (Button) findViewById(R.id.item_btn);
             }
             return null;
         }
