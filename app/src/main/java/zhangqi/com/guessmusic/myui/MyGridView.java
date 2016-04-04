@@ -49,11 +49,13 @@ public class MyGridView extends GridView {
 
         @Override
         public View getView(int position, View v, ViewGroup p) {
+            WordButton holder;
             if(v==null){
                 v= Util.getView(mContext, R.layout.self_ui_gridview_item);
+
+                holder = mArrayList.get(position);
             }
-            //
-            return v;
+            return null;
         }
     }
 
